@@ -8,36 +8,42 @@
 
 /* Colors */
 :root {
-  --primary-color: #1b3a2c;      /* Deep mining green */
-  --secondary-color: #d4af37;    /* Gold accent */
-  --dark-color: #2b2b2b;         /* Graphite gray */
-  --light-color: #f5f5f5;        /* Off-white background */
+  --primary-color: #1b3a2c;   /* Deep mining green */
+  --secondary-color: #ffffff; /* White */
+  --accent-color: #d4af37;    /* Optional gold accent */
   --text-color: #333;
 }
 
 /* Body */
 body {
-  background: var(--light-color);
+  background: var(--secondary-color);
   color: var(--text-color);
   line-height: 1.6;
   font-size: 16px;
 }
 
-/* Navbar */
+/* ================= Navbar ================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--primary-color);
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
 }
 
 .nav-logo img {
-  height: 50px;
+  height: 40px; /* small logo */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.nav-logo span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 .nav-items {
@@ -51,57 +57,53 @@ body {
 
 .nav-items li a {
   text-decoration: none;
-  color: white;
+  color: var(--secondary-color);
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .nav-items li a:hover,
 .nav-items li a.active-item {
-  color: var(--secondary-color);
-}
-
-.nav-button .filled-button {
   background: var(--secondary-color);
-  padding: 0.6rem 1.2rem;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
+  color: var(--primary-color);
 }
 
-.nav-button .filled-button:hover {
-  background: #b8902e; /* darker gold */
-}
-
-/* Hero Section */
+/* ================= Hero Section ================= */
 .main-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4rem 2rem;
-  background: linear-gradient(to right, var(--primary-color), #234d3a);
-  color: white;
+  background: linear-gradient(rgba(27,58,44,0.9), rgba(27,58,44,0.9)),
+              url('https://images.unsplash.com/photo-1606925797309-8a3b40a76a3e?auto=format&fit=crop&w=1600&q=80') 
+              no-repeat center center/cover;
+  color: var(--secondary-color);
 }
 
 .main-section-text h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
 .main-section-text span {
-  color: var(--secondary-color);
+  color: var(--accent-color); /* optional gold highlight */
 }
 
 .main-section-mockup img {
-  width: 450px;
+  width: 420px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  background: white;
+  padding: 5px;
 }
 
-/* Section Styles */
+/* ================= Sections ================= */
 .section {
   padding: 4rem 2rem;
   text-align: center;
+  background: var(--secondary-color);
 }
 
 .section h2 {
@@ -114,14 +116,14 @@ body {
 .section ul {
   max-width: 800px;
   margin: 0 auto;
-  color: var(--dark-color);
+  color: var(--text-color);
 }
 
 .section ul li {
   margin: 0.5rem 0;
 }
 
-/* Features / Values */
+/* ================= Features ================= */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -130,7 +132,7 @@ body {
 }
 
 .feature {
-  background: white;
+  background: var(--secondary-color);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
@@ -142,15 +144,15 @@ body {
 }
 
 .feature h3 {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: 0.8rem;
 }
 
-/* Buttons */
+/* ================= Buttons ================= */
 .filled-button {
   display: inline-block;
-  background: var(--secondary-color);
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
@@ -158,13 +160,13 @@ body {
 }
 
 .filled-button:hover {
-  background: #b8902e;
+  background: #145227;
 }
 
 .normal-button {
   display: inline-block;
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
@@ -173,14 +175,14 @@ body {
 }
 
 .normal-button:hover {
-  background: var(--secondary-color);
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-/* Footer */
+/* ================= Footer ================= */
 .footer {
   background: var(--primary-color);
-  color: white;
+  color: var(--secondary-color);
   text-align: center;
   padding: 2rem 1rem;
 }
