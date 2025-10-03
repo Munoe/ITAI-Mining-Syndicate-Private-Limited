@@ -8,9 +8,10 @@
 
 /* Colors */
 :root {
-  --primary-color: #1b3a2c;   /* Deep mining green */
+  --primary-color: #004080;   /* Deep Blue */
   --secondary-color: #ffffff; /* White */
-  --accent-color: #d4af37;    /* Optional gold accent */
+  --accent-color: #1e90ff;    /* Bright Blue for highlights */
+  --dark-color: #2b2b2b;
   --text-color: #333;
 }
 
@@ -35,7 +36,7 @@ body {
 }
 
 .nav-logo img {
-  height: 40px; /* small logo */
+  height: 40px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -76,7 +77,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 4rem 2rem;
-  background: linear-gradient(rgba(27,58,44,0.9), rgba(27,58,44,0.9)),
+  background: linear-gradient(rgba(0,64,128,0.85), rgba(0,64,128,0.85)),
               url('https://images.unsplash.com/photo-1606925797309-8a3b40a76a3e?auto=format&fit=crop&w=1600&q=80') 
               no-repeat center center/cover;
   color: var(--secondary-color);
@@ -88,15 +89,15 @@ body {
 }
 
 .main-section-text span {
-  color: var(--accent-color); /* optional gold highlight */
+  color: var(--accent-color);
 }
 
 .main-section-mockup img {
   width: 420px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   background: white;
   padding: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* ================= Sections ================= */
@@ -116,7 +117,7 @@ body {
 .section ul {
   max-width: 800px;
   margin: 0 auto;
-  color: var(--text-color);
+  color: var(--dark-color);
 }
 
 .section ul li {
@@ -144,14 +145,14 @@ body {
 }
 
 .feature h3 {
-  color: var(--primary-color);
+  color: var(--accent-color);
   margin-bottom: 0.8rem;
 }
 
 /* ================= Buttons ================= */
 .filled-button {
   display: inline-block;
-  background: var(--primary-color);
+  background: var(--accent-color);
   color: var(--secondary-color);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
@@ -160,13 +161,13 @@ body {
 }
 
 .filled-button:hover {
-  background: #145227;
+  background: #0066cc;
 }
 
 .normal-button {
   display: inline-block;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
@@ -175,7 +176,7 @@ body {
 }
 
 .normal-button:hover {
-  background: var(--primary-color);
+  background: var(--accent-color);
   color: var(--secondary-color);
 }
 
@@ -203,7 +204,7 @@ body {
 }
 
 .footer ul li a {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
